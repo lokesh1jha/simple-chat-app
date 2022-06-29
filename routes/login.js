@@ -8,11 +8,9 @@ router.get('/login', (req, res, next) => {
 });
 
 router.post('/login', (req, res, next) => {
-    console.log(req.body);
-    var username = req.body.username;
-    localStorage.setItem('username', JSON.stringify(username));
-    console(username, localStorage.getItem('username'));
-    res.redirect('/');
+    // console.log(req.body);
+    
+    res.redirect('/send');
 });
 
 module.exports = router;

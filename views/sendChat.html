@@ -8,8 +8,10 @@
 </head>
 <body>
     <div>
-        <form action="/send">
+        <form onsubmit="document.getElementById('username').value = localStorage.getItem('username')" 
+        action="/send" method="post">
             <label for="message">Type your message</label>
+            <input id="username" type="hidden" name="username">
             <input type="text" name="message" id="msg">
             <button type="submit">Send</button>
         </form>
